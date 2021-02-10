@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - 'packages/react-dynamic-multi-render/'
       - 'packages/react-dynamic-multi-render/**/*'

@@ -94,7 +94,7 @@ Multi render components need to implement a strict structure and should follow a
 
 First of all, there's some boilerplate code to implement.
 
-When create a multi render component, first of all create a folder with the component's name and an `index.tsx` file inside it, e.g.
+Create a folder with the component's name and an `index.tsx` file inside it, e.g.
 
 ```
 CheckoutButton

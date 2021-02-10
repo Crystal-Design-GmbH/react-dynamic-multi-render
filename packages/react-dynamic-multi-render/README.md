@@ -15,7 +15,7 @@ Next, in your application entry file, you need to setup a few things:
 import {
   DynamicMultiRenderProvider,
   DynamicMultiRenderConfig,
-} from 'dynamic-multi-render';
+} from 'react-dynamic-multi-render';
 import React, { Suspense, useEffect, useState } from 'react';
 // Your custom Loading component
 import Loading from '../Loading';
@@ -105,7 +105,7 @@ Inside that file, add the following boilerplate:
 
 ```typescript
 // index.tsx
-import DynamicMultiRender from 'dynamic-multi-render';
+import DynamicMultiRender from 'react-dynamic-multi-render';
 import React from 'react';
 
 export interface CheckoutButtonProps {

@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import {
   DynamicMultiRenderConfig,
   useDynamicMultiRenderConfig,
@@ -10,7 +10,7 @@ interface DynamicMultiRenderProps {
   componentName: string;
 }
 
-console.log('change 4 yei');
+console.log('change 5 yei');
 
 function loadComponent({
   componentName,

@@ -21,8 +21,12 @@ jobs:
         run: |
           npm i -g yarn
           npm i -g cantara
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Build package
         run: cantara build react-dynamic-multi-render
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Git Identity
         run: |
           git config --global user.name 'github-actions[bot]'

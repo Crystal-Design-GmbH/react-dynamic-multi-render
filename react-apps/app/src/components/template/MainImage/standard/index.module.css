@@ -1,0 +1,31 @@
+.main-image-container {
+  width: 100%;
+  max-width: 350px;
+  padding: 1rem;
+  margin: 2rem auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 0.5rem;
+  font-family: sans-serif;
+}
+
+.image-container {
+  height: calc(100vh - 10rem);
+  max-height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.settings-btn {
+  border: none;
+  background: #000;
+  border-bottom-right-radius: 0.5rem;
+  cursor: pointer;
+  color: #fff;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

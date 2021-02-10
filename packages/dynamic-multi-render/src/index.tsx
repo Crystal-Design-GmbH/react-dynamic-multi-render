@@ -4,7 +4,6 @@ import {
   useDynamicMultiRenderConfig,
 } from './config';
 import ErrorBoundary from './ErrorBounday';
-import LoadingFallback from './Loading';
 import { getComponentIndexFilePath } from './util';
 
 interface DynamicMultiRenderProps {
@@ -29,7 +28,10 @@ function loadComponent({
   return Component;
 }
 
-const DynamicMultiRender = ({ componentName }: DynamicMultiRenderProps) => {
+const DynamicMultiRender = ({
+  componentName,
+  ...props
+}: DynamicMultiRenderProps & { [propName: string]: any }) => {
   const config = useDynamicMultiRenderConfig();
 
   const Component = loadComponent({
@@ -39,11 +41,9 @@ const DynamicMultiRender = ({ componentName }: DynamicMultiRenderProps) => {
   });
 
   return (
-    <Suspense fallback={<LoadingFallback />}>
-      <ErrorBoundary>
-        <Component />
-      </ErrorBoundary>
-    </Suspense>
+    <ErrorBoundary>
+      <Component {...props} />
+    </ErrorBoundary>
   );
 };
 

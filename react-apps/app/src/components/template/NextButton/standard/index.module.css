@@ -1,0 +1,12 @@
+.next-btn {
+  width: 100%;
+  display: block;
+  border: none;
+  background: #221e22;
+  margin-top: 1rem;
+  border-radius: 0.2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+}

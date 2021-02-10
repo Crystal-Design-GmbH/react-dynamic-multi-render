@@ -2,8 +2,9 @@ import {
   DynamicMultiRenderProvider,
   DynamicMultiRenderConfig,
 } from 'dynamic-multi-render';
-import React, { useEffect, useState } from 'react';
-import GalleryItem from '../template/GalleryItem';
+import React, { Suspense, useEffect, useState } from 'react';
+import Loading from '../Loading';
+import MainImage from '../template/MainImage';
 
 interface Props {}
 
@@ -14,8 +15,8 @@ interface Props {}
 async function loadDynamicMultiRenderConfigFromServer() {
   const dynamicMultiRenderConfig: DynamicMultiRenderConfig = {
     templateConfig: {
-      GalleryItem: 'pluto',
-      CheckoutButton: 'extended',
+      MainImage: 'standard',
+      NextButton: 'standard',
     },
     importFactory: (path) => import(`../template/${path}`),
   };
@@ -43,9 +44,11 @@ const App = ({}: Props) => {
   }, [loadDynamicMultiRenderConfigFromServer]);
 
   return (
-    <DynamicMultiRenderProvider value={dynamicMultiRenderConfig}>
-      <GalleryItem />
-    </DynamicMultiRenderProvider>
+    <Suspense fallback={<Loading />}>
+      <DynamicMultiRenderProvider value={dynamicMultiRenderConfig}>
+        <MainImage />
+      </DynamicMultiRenderProvider>
+    </Suspense>
   );
 };
 

@@ -17,6 +17,7 @@ async function loadDynamicMultiRenderConfigFromServer() {
     templateConfig: {
       MainImage: 'standard',
       NextButton: 'standard',
+      Settings: ['standard', { preload: false }],
     },
     importFactory: (path) => import(`../template/${path}`),
   };

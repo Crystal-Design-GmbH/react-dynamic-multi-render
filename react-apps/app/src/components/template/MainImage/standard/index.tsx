@@ -9,14 +9,18 @@ import {
 import NextButton from '../../NextButton';
 import Settings from '../../Settings';
 import Loading from '../../../Loading';
+import classnames from 'classnames';
 
-interface Props {}
+interface Props {
+  containerClassName?: string;
+  imageClassName?: string;
+}
 
 const RANDOM_IMG_URL = 'https://source.unsplash.com/random';
 const POSSIBLE_TAGS = ['forest', 'dark', 'art', 'sea', 'mountain', 'lake'];
 const allTags = POSSIBLE_TAGS.map((tag) => ({ tag, isActive: true }));
 
-const MainImageStandard = (props: Props) => {
+const MainImageStandard = ({ containerClassName, imageClassName }: Props) => {
   const [showSettings, setShowSettings] = useState<boolean>(false);
   const [activeTags, setTags] = useState<{ tag: string; isActive: boolean }[]>(
     allTags,
@@ -34,7 +38,7 @@ const MainImageStandard = (props: Props) => {
   }
 
   return (
-    <div className={mainImageContainer}>
+    <div className={classnames(mainImageContainer, containerClassName)}>
       <Suspense fallback={<Loading />}>
         {showSettings ? (
           <Settings
@@ -45,7 +49,7 @@ const MainImageStandard = (props: Props) => {
         ) : (
           <>
             <div
-              className={imageContainer}
+              className={classnames(imageContainer, imageClassName)}
               style={{ backgroundImage: `url(${imgUrl})` }}
             >
               <button

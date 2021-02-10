@@ -1,11 +1,12 @@
 import React from 'react';
+import classnames from 'classnames';
 import { NextButtonProps } from '..';
 
 import { nextBtn } from './index.module.css';
 
-const NextButtonStandard = (props: NextButtonProps) => {
+const NextButtonStandard = ({ className, ...props }: NextButtonProps) => {
   return (
-    <button {...props} className={nextBtn}>
+    <button {...props} className={classnames(nextBtn, className)}>
       Next
     </button>
   );

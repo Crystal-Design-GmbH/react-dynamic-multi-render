@@ -23,12 +23,14 @@ export default function prefetchComponents(config: DynamicMultiRenderConfig) {
       shouldPreload = componentConfig[1]?.preload ?? true;
     }
     const entryFilePath = `${componentName}/index.tsx`;
-    // This prefetches the component
-    window.requestAnimationFrame(() => {
-      // Load entry file (index.tsx) and
-      // the relevant version index.tsx
-      config.importFactory(entryFilePath);
-      config.importFactory(fullRelativeIndexPath);
-    });
+    if (shouldPreload) {
+      // This prefetches the component
+      window.requestAnimationFrame(() => {
+        // Load entry file (index.tsx) and
+        // the relevant version index.tsx
+        config.importFactory(entryFilePath);
+        config.importFactory(fullRelativeIndexPath);
+      });
+    }
   }
 }

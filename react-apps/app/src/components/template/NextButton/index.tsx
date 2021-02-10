@@ -1,4 +1,4 @@
-import DynamicMultiRender from 'dynamic-multi-render';
+import DynamicMultiRender from 'react-dynamic-multi-render';
 import React, { ComponentProps } from 'react';
 
 export interface NextButtonProps extends ComponentProps<'button'> {}

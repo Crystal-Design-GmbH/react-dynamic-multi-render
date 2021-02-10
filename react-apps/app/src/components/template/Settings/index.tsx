@@ -1,4 +1,4 @@
-import DynamicMultiRender from 'dynamic-multi-render';
+import DynamicMultiRender from 'react-dynamic-multi-render';
 import React from 'react';
 
 export interface SettingsProps {

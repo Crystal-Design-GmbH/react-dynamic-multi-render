@@ -1,7 +1,7 @@
 import {
   DynamicMultiRenderProvider,
   DynamicMultiRenderConfig,
-} from 'dynamic-multi-render';
+} from 'react-dynamic-multi-render';
 import React, { Suspense, useEffect, useState } from 'react';
 import Loading from '../Loading';
 import MainImage from '../template/MainImage';

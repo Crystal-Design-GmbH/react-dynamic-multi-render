@@ -35,6 +35,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
+          git fetch --all --tags
+          git fetch origin +refs/tags/*:refs/tags/*
           git checkout main
           git reset HEAD --hard
           npx lerna version --conventional-commits --no-push --yes

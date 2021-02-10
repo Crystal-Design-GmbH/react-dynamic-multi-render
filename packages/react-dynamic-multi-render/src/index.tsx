@@ -10,7 +10,7 @@ interface DynamicMultiRenderProps {
   componentName: string;
 }
 
-console.log('change 7 yei');
+console.log('change 8 yei');
 
 function loadComponent({
   componentName,

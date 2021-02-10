@@ -28,6 +28,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
+          git checkout main
           git reset HEAD --hard
           npx lerna version --conventional-commits --no-push --yes
           npx lerna publish from-package --yes

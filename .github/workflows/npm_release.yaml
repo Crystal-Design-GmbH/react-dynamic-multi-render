@@ -1,0 +1,34 @@
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'packages/react-dynamic-multi-render/'
+      - 'packages/react-dynamic-multi-render/**/*'
+      - 'packages/react-dynamic-multi-render/*'
+jobs:
+  release:
+    name: Release
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Install global deps
+        run: |
+          npm i -g yarn
+          npm i -g cantara
+      - name: Build package
+        run: cantara build react-dynamic-multi-render
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          git reset HEAD --hard
+          npx lerna version --conventional-commits --no-push --yes
+          npx lerna publish from-package --yes
+          git push --follow-tags

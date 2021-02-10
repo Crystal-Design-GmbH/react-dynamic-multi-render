@@ -73,7 +73,7 @@ const dynamicMultiRenderConfig: DynamicMultiRenderConfig = {
 };
 ```
 
-Althoug `standard` is the default version which will be loaded it isn't present in this object, it is better to include every component, because every component which is included in this object will automatically be preloaded as soon as the app starts.
+Althoug `standard` is the default version which will be loaded if it isn't present in this object, it is better to include every component, because every component which is included in this object will automatically be preloaded as soon as the app starts.
 To disable that behaviour, set `{ preload: false }`.
 
 For the `importFactory` function, you need to define a dynamic import which resolves and loads the actual components. This function needs to return a dynamic import which starts with a relative path. This is needed so that webpack knows what chunks it needs to prepare. It accepts `path` as it's first parameter, which is essentially the relative path of the component to load inside the folder.

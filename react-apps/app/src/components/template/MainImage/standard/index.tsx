@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { IoSettings as SettingsIcon } from 'react-icons/io5';
 import {
   mainImageContainer,
@@ -25,6 +25,14 @@ const MainImageStandard = ({ containerClassName, imageClassName }: Props) => {
   const [activeTags, setTags] = useState<{ tag: string; isActive: boolean }[]>(
     allTags,
   );
+
+  const [highlightBtn, setHighlight] = useState<boolean>(false);
+
+  useEffect(() => {
+    setInterval(() => {
+      setHighlight((curr) => !curr);
+    }, 1000);
+  }, []);
 
   const getUrl = () =>
     `${RANDOM_IMG_URL}?date=${Date.now()}&${activeTags
@@ -59,7 +67,10 @@ const MainImageStandard = ({ containerClassName, imageClassName }: Props) => {
                 <SettingsIcon size="1rem" />
               </button>
             </div>
-            <NextButton onClick={onNext} />
+            <NextButton
+              onClick={onNext}
+              style={highlightBtn ? { background: 'red' } : {}}
+            />
           </>
         )}
       </Suspense>

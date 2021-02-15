@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { loader as loaderClass } from './index.module.css';
 import loader from './loading.svg';
 
-interface Props {}
+interface Props {
+  name?: string;
+}
 
 const DELAY = 250;
 
@@ -10,11 +12,14 @@ const DELAY = 250;
  * Only shows up after 250ms
  * to prevent a flash
  */
-const Loading = (props: Props) => {
+const Loading = ({ name: cmpName }: Props) => {
   const [show, setShow] = useState<boolean>(false);
 
   useEffect(() => {
     let didCancel = false;
+    if (cmpName) {
+      console.log(`[LAZY LOAD] ${cmpName}`);
+    }
 
     window.setTimeout(() => {
       if (!didCancel) setShow(true);
@@ -23,7 +28,7 @@ const Loading = (props: Props) => {
     return () => {
       didCancel = true;
     };
-  }, [DELAY]);
+  }, [DELAY, cmpName]);
 
   if (!show) return <></>;
 

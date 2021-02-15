@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   DynamicMultiRenderConfig,
   useDynamicMultiRenderConfig,
@@ -10,7 +10,7 @@ interface DynamicMultiRenderProps {
   componentName: string;
 }
 
-console.log('change 9 yei');
+type LazyComponent = ReturnType<typeof React.lazy> | ((p?: any) => JSX.Element);
 
 function loadComponent({
   componentName,
@@ -36,11 +36,19 @@ const DynamicMultiRender = ({
 }: DynamicMultiRenderProps & { [propName: string]: any }) => {
   const config = useDynamicMultiRenderConfig();
 
-  const Component = loadComponent({
-    componentName,
-    importFactory: config?.importFactory,
-    templateConfig: config?.templateConfig,
-  });
+  function getLazyComponent() {
+    return loadComponent({
+      componentName,
+      importFactory: config?.importFactory,
+      templateConfig: config?.templateConfig,
+    });
+  }
+
+  const [Component, setComponent] = useState<LazyComponent>(getLazyComponent);
+
+  useEffect(() => {
+    setComponent(getLazyComponent);
+  }, [componentName, config?.importFactory, config?.templateConfig]);
 
   return (
     <ErrorBoundary>

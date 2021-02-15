@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/scriptify/react-dynamic-multi-render/compare/react-dynamic-multi-render@0.1.0...react-dynamic-multi-render@0.1.1) (2021-02-15)
+
+
+### Bug Fixes
+
+* make sure React.lazy is only called once per component lifecycle to prevent flickering. ([89b2779](https://github.com/scriptify/react-dynamic-multi-render/commit/89b27799889bb442eb1192f7bcffa5d68c8e7f46))
+
+
+
+
+
 # 0.1.0 (2021-02-10)
 
 

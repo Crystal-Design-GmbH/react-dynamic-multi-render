@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/scriptify/react-dynamic-multi-render/compare/random-image@1.1.0...random-image@1.1.1) (2021-02-15)
+
+
+### Bug Fixes
+
+* make sure React.lazy is only called once per component lifecycle to prevent flickering. ([89b2779](https://github.com/scriptify/react-dynamic-multi-render/commit/89b27799889bb442eb1192f7bcffa5d68c8e7f46))
+
+
+
+
+
 # 1.1.0 (2021-02-10)
 
 

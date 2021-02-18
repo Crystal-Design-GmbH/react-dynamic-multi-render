@@ -36,7 +36,9 @@ const App = ({}: Props) => {
 
     (async () => {
       const configFromServer = await loadDynamicMultiRenderConfigFromServer();
-      setDynamicMultiRenderConfig(configFromServer);
+      if (!didCancel) {
+        setDynamicMultiRenderConfig(configFromServer);
+      }
     })();
 
     return () => {

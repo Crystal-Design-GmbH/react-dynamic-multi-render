@@ -1,33 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import {
-  DynamicMultiRenderConfig,
-  useDynamicMultiRenderConfig,
-} from './config';
+import React from 'react';
+import { useDynamicMultiRenderConfig } from './config';
 import ErrorBoundary from './ErrorBounday';
-import { getComponentIndexFilePath } from './util';
+import loadComponent from './load-component';
 
-interface DynamicMultiRenderProps {
+export interface DynamicMultiRenderProps {
   componentName: string;
-}
-
-type LazyComponent = ReturnType<typeof React.lazy> | ((p?: any) => JSX.Element);
-
-function loadComponent({
-  componentName,
-  templateConfig,
-  importFactory,
-}: Partial<DynamicMultiRenderConfig> & DynamicMultiRenderProps) {
-  if (componentName === undefined || importFactory === undefined)
-    return () => <></>;
-
-  const fullRelativeIndexPath = getComponentIndexFilePath({
-    componentName,
-    templateConfig,
-    importFactory,
-  });
-
-  const Component = React.lazy(() => importFactory(fullRelativeIndexPath));
-  return Component;
 }
 
 const DynamicMultiRender = ({
@@ -36,19 +13,16 @@ const DynamicMultiRender = ({
 }: DynamicMultiRenderProps & { [propName: string]: any }) => {
   const config = useDynamicMultiRenderConfig();
 
-  function getLazyComponent() {
-    return loadComponent({
-      componentName,
-      importFactory: config?.importFactory,
-      templateConfig: config?.templateConfig,
-    });
-  }
+  const Component = loadComponent({
+    componentName,
+    importFactory: config?.importFactory,
+    templateConfig: config?.templateConfig,
+  });
+  // const [Component, setComponent] = useState<LazyComponent>(getLazyComponent);
 
-  const [Component, setComponent] = useState<LazyComponent>(getLazyComponent);
-
-  useEffect(() => {
-    setComponent(getLazyComponent);
-  }, [componentName, config?.importFactory, config?.templateConfig]);
+  // useEffect(() => {
+  //   setComponent(getLazyComponent);
+  // }, [componentName, config?.importFactory, config?.templateConfig]);
 
   return (
     <ErrorBoundary>

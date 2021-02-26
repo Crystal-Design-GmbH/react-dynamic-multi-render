@@ -1,5 +1,5 @@
 import { DynamicMultiRenderConfig } from './config';
-import { getComponentIndexFilePath } from './util';
+import { preloadComponent } from './load-component';
 
 /**
  * Prefetches all components
@@ -13,23 +13,19 @@ import { getComponentIndexFilePath } from './util';
 export default function prefetchComponents(config: DynamicMultiRenderConfig) {
   const allComponentNames = Object.keys(config.templateConfig);
   for (const componentName of allComponentNames) {
-    const fullRelativeIndexPath = getComponentIndexFilePath({
-      ...config,
-      componentName,
-    });
     const componentConfig = config.templateConfig[componentName];
     let shouldPreload = true;
     if (typeof componentConfig !== 'string') {
       shouldPreload = componentConfig[1]?.preload ?? true;
     }
-    const entryFilePath = `${componentName}/index.tsx`;
     if (shouldPreload) {
       // This prefetches the component
       window.requestAnimationFrame(() => {
-        // Load entry file (index.tsx) and
-        // the relevant version index.tsx
-        config.importFactory(entryFilePath);
-        config.importFactory(fullRelativeIndexPath);
+        // prefetch component and initialize cache
+        preloadComponent({
+          ...config,
+          componentName,
+        });
       });
     }
   }

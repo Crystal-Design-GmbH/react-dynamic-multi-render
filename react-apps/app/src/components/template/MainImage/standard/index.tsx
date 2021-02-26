@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IoSettings as SettingsIcon } from 'react-icons/io5';
 import {
   mainImageContainer,
@@ -47,33 +47,31 @@ const MainImageStandard = ({ containerClassName, imageClassName }: Props) => {
 
   return (
     <div className={classnames(mainImageContainer, containerClassName)}>
-      <Suspense fallback={<Loading />}>
-        {showSettings ? (
-          <Settings
-            onTagsChange={setTags}
-            onClose={() => setShowSettings(false)}
-            activeTags={activeTags}
-          />
-        ) : (
-          <>
-            <div
-              className={classnames(imageContainer, imageClassName)}
-              style={{ backgroundImage: `url(${imgUrl})` }}
+      {showSettings ? (
+        <Settings
+          onTagsChange={setTags}
+          onClose={() => setShowSettings(false)}
+          activeTags={activeTags}
+        />
+      ) : (
+        <>
+          <div
+            className={classnames(imageContainer, imageClassName)}
+            style={{ backgroundImage: `url(${imgUrl})` }}
+          >
+            <button
+              className={settingsBtn}
+              onClick={() => setShowSettings(true)}
             >
-              <button
-                className={settingsBtn}
-                onClick={() => setShowSettings(true)}
-              >
-                <SettingsIcon size="1rem" />
-              </button>
-            </div>
-            <NextButton
-              onClick={onNext}
-              style={highlightBtn ? { background: 'red' } : {}}
-            />
-          </>
-        )}
-      </Suspense>
+              <SettingsIcon size="1rem" />
+            </button>
+          </div>
+          <NextButton
+            onClick={onNext}
+            style={highlightBtn ? { background: 'red' } : {}}
+          />
+        </>
+      )}
     </div>
   );
 };

@@ -18,11 +18,6 @@ const DynamicMultiRender = ({
     importFactory: config?.importFactory,
     templateConfig: config?.templateConfig,
   });
-  // const [Component, setComponent] = useState<LazyComponent>(getLazyComponent);
-
-  // useEffect(() => {
-  //   setComponent(getLazyComponent);
-  // }, [componentName, config?.importFactory, config?.templateConfig]);
 
   return (
     <ErrorBoundary>

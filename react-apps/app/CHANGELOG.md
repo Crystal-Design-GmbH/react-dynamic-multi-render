@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://github.com/scriptify/react-dynamic-multi-render/compare/random-image@1.1.1...random-image@1.1.2) (2021-02-18)
+
+
+### Bug Fixes
+
+* use global component cache instead of local useState ([1816925](https://github.com/scriptify/react-dynamic-multi-render/commit/1816925b238b54529fac85e67370435ae4756328))
+
+
+
+
+
 ## [1.1.1](https://github.com/scriptify/react-dynamic-multi-render/compare/random-image@1.1.0...random-image@1.1.1) (2021-02-15)
 
 

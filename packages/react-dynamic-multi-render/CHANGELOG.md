@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/scriptify/react-dynamic-multi-render/compare/react-dynamic-multi-render@0.1.1...react-dynamic-multi-render@0.1.2) (2021-02-18)
+
+
+### Bug Fixes
+
+* use global component cache instead of local useState ([1816925](https://github.com/scriptify/react-dynamic-multi-render/commit/1816925b238b54529fac85e67370435ae4756328))
+
+
+
+
+
 ## [0.1.1](https://github.com/scriptify/react-dynamic-multi-render/compare/react-dynamic-multi-render@0.1.0...react-dynamic-multi-render@0.1.1) (2021-02-15)
 
 

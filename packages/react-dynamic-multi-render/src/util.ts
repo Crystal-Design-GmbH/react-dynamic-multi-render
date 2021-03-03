@@ -11,7 +11,7 @@ export function getComponentIndexFilePath({
         : templateConfig[componentName]
       : undefined) ?? 'standard';
 
-  const indexFilePath = `${templateName}/index.tsx`;
+  const indexFilePath = `${templateName}`;
 
   const fullRelativeIndexPath = `${componentName}/${indexFilePath}`;
 

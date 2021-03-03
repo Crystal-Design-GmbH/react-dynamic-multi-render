@@ -46,10 +46,7 @@ export function preloadComponent(parameters: LoadComponentParams) {
     const { default: Component } = await importFactory(fullRelativeIndexPath);
     if (!componentCache.has(cacheKey)) {
       // 'loadComponent' wasn't yet called
-      console.log('Init cache for', componentName);
       componentCache.set(cacheKey, Component);
-    } else {
-      console.log('React.lazy was already created', componentName);
     }
   };
 

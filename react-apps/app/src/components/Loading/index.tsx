@@ -15,8 +15,6 @@ const DELAY = 250;
 const Loading = ({ name: cmpName }: Props) => {
   const [show, setShow] = useState<boolean>(false);
 
-  console.log(`[LAZY LOAD] ${cmpName ?? ''}`);
-
   useEffect(() => {
     let didCancel = false;
 

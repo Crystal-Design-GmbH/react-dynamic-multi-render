@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/scriptify/react-dynamic-multi-render/compare/react-dynamic-multi-render@0.1.2...react-dynamic-multi-render@0.2.0) (2021-02-26)
+
+
+### Features
+
+* if components are preloaded in the background, use the non-lazy component. prevents flickering. ([11e4f14](https://github.com/scriptify/react-dynamic-multi-render/commit/11e4f146363c7d1d807afc5ac7e2b7e10f06d565))
+
+
+
+
+
 ## [0.1.2](https://github.com/scriptify/react-dynamic-multi-render/compare/react-dynamic-multi-render@0.1.1...react-dynamic-multi-render@0.1.2) (2021-02-18)
 
 

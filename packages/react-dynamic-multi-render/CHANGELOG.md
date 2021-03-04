@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/scriptify/react-dynamic-multi-render/compare/react-dynamic-multi-render@0.2.0...react-dynamic-multi-render@0.2.1) (2021-03-03)
+
+
+### Bug Fixes
+
+* resolve index path dynamically ([1264a1b](https://github.com/scriptify/react-dynamic-multi-render/commit/1264a1b81c2e2171af43cd822e2e9d04fdabd83d))
+
+
+
+
+
 # [0.2.0](https://github.com/scriptify/react-dynamic-multi-render/compare/react-dynamic-multi-render@0.1.2...react-dynamic-multi-render@0.2.0) (2021-02-26)
 
 

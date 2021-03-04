@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/scriptify/react-dynamic-multi-render/compare/random-image@1.2.0...random-image@1.2.1) (2021-03-03)
+
+
+### Bug Fixes
+
+* resolve index path dynamically ([1264a1b](https://github.com/scriptify/react-dynamic-multi-render/commit/1264a1b81c2e2171af43cd822e2e9d04fdabd83d))
+
+
+
+
+
 # [1.2.0](https://github.com/scriptify/react-dynamic-multi-render/compare/random-image@1.1.2...random-image@1.2.0) (2021-02-26)
 
 

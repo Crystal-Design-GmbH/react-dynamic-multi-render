@@ -1,7 +1,7 @@
 {
   "name": "react-dynamic-multi-render",
   "version": "0.2.0",
-  "main": "./build/react-dynamic-multi-render/src/index.js",
+  "main": "build/cjs/index.js",
   "license": "MIT",
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.9",
@@ -13,5 +13,9 @@
     "react": "17.0.1",
     "react-dom": "17.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@babel/runtime": "^7.13.9"
+  },
+  "module": "build/esm/index.js",
+  "browser": "D:\\DEV\\diva-component-shadowing\\packages\\react-dynamic-multi-render\\build\\umd\\react-dynamic-multi-render.umd.min.js"
 }

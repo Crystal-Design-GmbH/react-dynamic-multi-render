@@ -6,6 +6,8 @@ on:
       - 'packages/react-dynamic-multi-render/'
       - 'packages/react-dynamic-multi-render/**/*'
       - 'packages/react-dynamic-multi-render/*'
+      - 'packages/react-dynamic-multi-render/*'
+      - '.github/workflows/npm_release.yaml'
 jobs:
   release:
     name: Release

@@ -1,7 +1,6 @@
 {
   "name": "react-dynamic-multi-render",
   "version": "0.2.3",
-  "main": "./build/react-dynamic-multi-render/src/index.js",
   "license": "MIT",
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.9",
@@ -12,5 +11,8 @@
   "peerDependencies": {
     "react": "17.0.1",
     "react-dom": "17.0.1"
-  }
+  },
+  "dependencies": {},
+  "module": "build/esm/index.js",
+  "types": "./build/types/index.d.ts"
 }

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/Crystal-Design-GmbH/react-dynamic-multi-render/compare/react-dynamic-multi-render@0.2.3...react-dynamic-multi-render@0.2.4) (2021-07-13)
+
+
+### Bug Fixes
+
+* trigger build ([5a8049d](https://github.com/Crystal-Design-GmbH/react-dynamic-multi-render/commit/5a8049da511d4d9945b851bc9c06e3c0ce0153c1))
+* use stable cantara build ([03e61f9](https://github.com/Crystal-Design-GmbH/react-dynamic-multi-render/commit/03e61f990357ee3450decd413b98ce1a5e38a36a))
+
+
+
+
+
 ## [0.2.3](https://github.com/Crystal-Design-GmbH/react-dynamic-multi-render/compare/react-dynamic-multi-render@0.2.2...react-dynamic-multi-render@0.2.3) (2021-07-13)
 
 

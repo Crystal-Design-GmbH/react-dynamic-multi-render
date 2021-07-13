@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/Crystal-Design-GmbH/react-dynamic-multi-render/compare/random-image@1.2.2...random-image@1.2.3) (2021-07-13)
+
+
+### Bug Fixes
+
+* use stable cantara build ([03e61f9](https://github.com/Crystal-Design-GmbH/react-dynamic-multi-render/commit/03e61f990357ee3450decd413b98ce1a5e38a36a))
+
+
+
+
+
 ## [1.2.2](https://github.com/scriptify/react-dynamic-multi-render/compare/random-image@1.2.1...random-image@1.2.2) (2021-03-04)
 
 **Note:** Version bump only for package random-image

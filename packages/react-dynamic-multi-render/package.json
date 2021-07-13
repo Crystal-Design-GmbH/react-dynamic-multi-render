@@ -1,6 +1,6 @@
 {
   "name": "react-dynamic-multi-render",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "main": "./build/react-dynamic-multi-render/src/index.js",
   "license": "MIT",
   "devDependencies": {

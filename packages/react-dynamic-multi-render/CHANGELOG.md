@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/Crystal-Design-GmbH/react-dynamic-multi-render/compare/react-dynamic-multi-render@0.2.2...react-dynamic-multi-render@0.2.3) (2021-07-13)
+
+
+### Bug Fixes
+
+* trigger build ([6d97fe1](https://github.com/Crystal-Design-GmbH/react-dynamic-multi-render/commit/6d97fe1c0a0df85eed4f62a82127d3c8a412b96f))
+
+
+
+
+
 ## [0.2.2](https://github.com/scriptify/react-dynamic-multi-render/compare/react-dynamic-multi-render@0.2.1...react-dynamic-multi-render@0.2.2) (2021-03-04)
 
 **Note:** Version bump only for package react-dynamic-multi-render

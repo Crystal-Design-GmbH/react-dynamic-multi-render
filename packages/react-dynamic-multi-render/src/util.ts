@@ -17,3 +17,4 @@ export function getComponentIndexFilePath({
 
   return fullRelativeIndexPath;
 }
+//fake changes

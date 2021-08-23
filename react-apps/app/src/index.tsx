@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import RandomImage from 'random-image';
 
 import './index.css';
 
-ReactDOM.render(<App />, document.querySelector('#app'));
+ReactDOM.render(<RandomImage />, document.querySelector('#app'));

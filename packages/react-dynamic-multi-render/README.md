@@ -29,7 +29,7 @@ const dynamicMultiRenderConfig: DynamicMultiRenderConfig = {
     NextButton: 'standard',
     Settings: ['standard', { preload: false }],
   },
-  importFactory: (path) => import(`../template/${path}`),
+  importFactory: (path) => import(`../template/${path}.tsx`),
 };
 
 const App = ({}: Props) => {
@@ -82,9 +82,11 @@ If, like in our case, the folder's name is `template`, that function would like 
 ```typescript
 const dynamicMultiRenderConfig: DynamicMultiRenderConfig = {
   // ...
-  importFactory: (path) => import(`../template/${path}`),
+  importFactory: (path) => import(`../template/${path}.tsx`),
 };
 ```
+
+__Important!__ Mind the `.tsx` file extension!
 
 This will create a lazy-loadable chunk for every resolvable file inside the `template` folder.
 

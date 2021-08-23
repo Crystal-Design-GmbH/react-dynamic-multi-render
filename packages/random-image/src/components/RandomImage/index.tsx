@@ -15,18 +15,18 @@ interface Props {}
 async function loadDynamicMultiRenderConfigFromServer() {
   const dynamicMultiRenderConfig: DynamicMultiRenderConfig = {
     templateConfig: {
-      MainImage: 'standard',
+      MainImage: 'mars',
       NextButton: 'standard',
       Settings: 'standard',
       // Settings: ['standard', { preload: false }],
     },
-    importFactory: (path) => import(`../template/${path}`),
+    importFactory: (path) => import(`../template/${path}.tsx`),
   };
 
   return dynamicMultiRenderConfig;
 }
 
-const App = ({}: Props) => {
+const RandomImage = ({}: Props) => {
   const [
     dynamicMultiRenderConfig,
     setDynamicMultiRenderConfig,
@@ -56,4 +56,4 @@ const App = ({}: Props) => {
   );
 };
 
-export default App;
+export default RandomImage;

@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/Crystal-Design-GmbH/react-dynamic-multi-render/compare/react-dynamic-multi-render@0.2.4...react-dynamic-multi-render@0.3.0) (2021-08-23)
+
+
+### Bug Fixes
+
+* invalid package.json ([01af757](https://github.com/Crystal-Design-GmbH/react-dynamic-multi-render/commit/01af75723c52367b976a1f8534dc1177dfd90350))
+
+
+* fix!: adjust dynamic import to new rollup plugin ([df6a144](https://github.com/Crystal-Design-GmbH/react-dynamic-multi-render/commit/df6a14435bd62689dc27dcd74ac384b383c16e41))
+
+
+### BREAKING CHANGES
+
+* You need to append the file extension in the dynamic
+import factory!
+
+
+
+
+
 ## [0.2.4](https://github.com/Crystal-Design-GmbH/react-dynamic-multi-render/compare/react-dynamic-multi-render@0.2.3...react-dynamic-multi-render@0.2.4) (2021-07-13)
 
 

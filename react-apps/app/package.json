@@ -1,6 +1,5 @@
 {
   "name": "random-image-app",
-  "name": "random-image",
   "version": "1.2.3",
   "description": "",
   "main": "build/index.js",

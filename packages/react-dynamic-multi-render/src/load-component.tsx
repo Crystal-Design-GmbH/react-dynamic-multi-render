@@ -95,7 +95,7 @@ function getReactLazyComponent({
     importFactory,
   });
 
-  // File extenion needed!
+  // File extenion needed!..
   const Component = lazy(() => importFactory(fullRelativeIndexPath));
 
   return Component;

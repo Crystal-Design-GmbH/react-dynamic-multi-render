@@ -1,0 +1,20 @@
+{
+  "name": "random-image",
+  "version": "1.0.0",
+  "main": "build/cjs/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "@testing-library/react": "^11.2.3",
+    "@testing-library/jest-dom": "^5.11.9"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
+  },
+  "module": "build/esm/index.js",
+  "browser": "build/umd/random-image.umd.min.js",
+  "types": "./build/types/index.d.ts"
+}
